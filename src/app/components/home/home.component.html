@@ -1,0 +1,8 @@
+<div *ngIf="podcasts && podcasts.length">
+  <div *ngFor="let podcast of podcasts">
+    <app-list-item [podcast]="podcast"></app-list-item>
+  </div>
+</div>
+<div *ngIf="!podcasts || !podcasts.length">
+  <p>No podcasts available.</p>
+</div>

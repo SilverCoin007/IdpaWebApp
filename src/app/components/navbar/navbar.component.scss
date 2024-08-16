@@ -1,0 +1,98 @@
+.navbar {
+  padding: 20px;
+  transition: padding 0.2s ease, background-color 0.2s ease, width 0.2s ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #504e4e;
+  gap: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.2s ease, color 0.2s ease, width 0.2s ease;
+}
+
+.nav-item {
+  padding: 1rem 0;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0;
+  transition: margin-bottom 0.2s ease;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: #504e4e;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.2s ease, font-size 0.2s ease;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.link {
+  margin-left: 0.6rem;
+  transition: margin-left 0.2s ease;
+}
+
+.nav-text {
+  opacity: 1;
+  transition: opacity 0.2s ease, width 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collapsed .nav-text {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-link img {
+  flex-shrink: 0;
+}
+
+.nav-link .nav-text {
+  flex-grow: 1;
+}
+
+.nav-link {
+  opacity: 1;
+}
+
+.inactive .nav-link {
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.inactive .nav-link:hover {
+  opacity: 1;
+}

@@ -1,0 +1,9 @@
+<div class="audio-player-controls" *ngIf="audioPlayerService.getCurrentPodcast()">
+    <button (click)="playCurrentPodcast()">Play</button>
+    <button (click)="audioPlayerService.pause()">Pause</button>
+    <button (click)="audioPlayerService.stop()">Stop</button>
+    <button (click)="seekBackward()">-10s</button>
+    <button (click)="seekForward()">+10s</button>
+    <div>{{ audioPlayerService.getCurrentTime() | date:'mm:ss' }} / {{ audioPlayerService.getDuration() | date:'mm:ss' }}</div>
+  </div>
+  

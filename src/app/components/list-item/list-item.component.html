@@ -1,0 +1,12 @@
+<div *ngIf="podcast">
+    <div class="audio" (click)="playPodcast()">
+      <div class="audio-index">{{ formatIndex(podcast.index) }}</div>
+      <img [src]="podcast.image_url" alt="{{ podcast.name }}" width="40" height="40" class="audio-thumbnail" />
+      <div class="audio-details">
+        <div class="audio-name">{{ podcast.name }}</div>
+        <div class="audio-author">By {{ podcast.author }}</div>
+      </div>
+      <div class="audio-length">{{ podcast.length }}</div>
+    </div>
+  </div>
+  
