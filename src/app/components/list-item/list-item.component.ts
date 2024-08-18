@@ -16,7 +16,7 @@ export class ListItemComponent {
   constructor(private audioPlayerService: AudioPlayerService) {}
 
   formatIndex(index: number): string {
-    return index < 10 ? `0${index}` : `${index}`;
+  return (index + 1) < 10 ? `0${index + 1}` : `${index + 1}`;
   }
 
   playPodcast() {

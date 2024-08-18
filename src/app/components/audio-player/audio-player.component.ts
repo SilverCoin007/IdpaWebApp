@@ -11,7 +11,7 @@ import { AudioPlayerService } from '../../services/audio-player.service';
 })
 export class AudioPlayerComponent {
   constructor(public audioPlayerService: AudioPlayerService) {}
-  
+
   onSeek(event: Event) {
     const newValue = (event.target as HTMLInputElement).value;
     this.audioPlayerService.seekTo(Number(newValue));

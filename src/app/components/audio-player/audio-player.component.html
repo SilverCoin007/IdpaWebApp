@@ -30,11 +30,12 @@
     </div>
 
     <div class="audio-player-buttons">
-      <button (click)="audioPlayerService.playPrevious()">Previous</button>
-      <button (click)="audioPlayerService.togglePlayPause()">
-        {{ (audioPlayerService.isPlaying | async) ? 'Pause' : 'Play' }}
-      </button>
-      <button (click)="audioPlayerService.playNext()">Next</button>
+      <i class="fas fa-step-backward" (click)="audioPlayerService.playPrevious()"></i>
+      <i class="fas" 
+        [ngClass]="(audioPlayerService.isPlaying | async) ? 'fa-circle-pause' : 'fa-circle-play'" 
+        (click)="audioPlayerService.togglePlayPause()">
+      </i>
+      <i class="fas fa-step-forward" (click)="audioPlayerService.playNext()"></i>
     </div>
   </div>
 </div>
