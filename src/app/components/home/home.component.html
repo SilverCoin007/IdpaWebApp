@@ -1,8 +1,8 @@
-<div *ngIf="podcasts && podcasts.length">
+<div *ngIf="podcasts$ | async as podcasts; else noPodcasts">
   <div *ngFor="let podcast of podcasts">
     <app-list-item [podcast]="podcast"></app-list-item>
   </div>
 </div>
-<div *ngIf="!podcasts || !podcasts.length">
+<ng-template #noPodcasts>
   <p>No podcasts available.</p>
-</div>
+</ng-template>

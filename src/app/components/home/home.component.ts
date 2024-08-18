@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService } from '../../services/data.service';
-import { Podcast } from '../../models/podcast.model';
 import { ListItemComponent } from '../list-item/list-item.component';
+import { AudioPlayerService } from '../../services/audio-player.service';
+import { Observable } from 'rxjs';
+import { Podcast } from '../../models/podcast.model';
 
 @Component({
   selector: 'app-home',
@@ -11,22 +12,10 @@ import { ListItemComponent } from '../list-item/list-item.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  podcasts: Podcast[] = [];
+export class HomeComponent {
+  podcasts$: Observable<Podcast[]>;
 
-  constructor(private dataService: DataService) {}
-
-  ngOnInit(): void {
-    this.dataService.getPodcasts().subscribe({
-      next: (podcasts: Podcast[]) => {
-        this.podcasts = podcasts;
-      },
-      error: (error: any) => {
-        console.error('Error fetching podcasts:', error);
-      },
-      complete: () => {
-        console.log('Podcast fetching completed');
-      }
-    });
+  constructor(public audioPlayerService: AudioPlayerService) {
+    this.podcasts$ = this.audioPlayerService.playlist.asObservable();
   }
 }
