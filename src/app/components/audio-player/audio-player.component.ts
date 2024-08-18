@@ -11,19 +11,9 @@ import { AudioPlayerService } from '../../services/audio-player.service';
 })
 export class AudioPlayerComponent {
   constructor(public audioPlayerService: AudioPlayerService) {}
-
-  seekForward() {
-    this.audioPlayerService.seek(10);
-  }
-
-  seekBackward() {
-    this.audioPlayerService.seek(-10);
-  }
-
-  playCurrentPodcast() {
-    const currentPodcast = this.audioPlayerService.getCurrentPodcast();
-    if (currentPodcast) {
-      this.audioPlayerService.play(currentPodcast);
-    }
+  
+  onSeek(event: Event) {
+    const newValue = (event.target as HTMLInputElement).value;
+    this.audioPlayerService.seekTo(Number(newValue));
   }
 }

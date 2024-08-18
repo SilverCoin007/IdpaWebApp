@@ -1,0 +1,69 @@
+.audio-player {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .audio-player-header {
+    margin-bottom: 20px;
+  }
+  
+  .audio-player-header h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .audio-player-thumbnail {
+    margin-bottom: 20px;
+  }
+  
+  .audio-player-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .audio-player-info {
+    margin-bottom: 20px;
+  }
+  
+  .audio-player-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .audio-player-author {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .audio-player-controls {
+    margin-top: 20px;
+  }
+  
+  .audio-player-controls input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .audio-player-timeline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .audio-player-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .audio-player-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

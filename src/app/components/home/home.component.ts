@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService, Podcast } from '../../services/data.service';
+import { DataService } from '../../services/data.service';
+import { Podcast } from '../../models/podcast.model';
 import { ListItemComponent } from '../list-item/list-item.component';
 
 @Component({
@@ -16,10 +17,16 @@ export class HomeComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getPodcasts().subscribe(podcasts => {
-      this.podcasts = podcasts;
-    }, error => {
-      console.error('Error fetching podcasts:', error);
+    this.dataService.getPodcasts().subscribe({
+      next: (podcasts: Podcast[]) => {
+        this.podcasts = podcasts;
+      },
+      error: (error: any) => {
+        console.error('Error fetching podcasts:', error);
+      },
+      complete: () => {
+        console.log('Podcast fetching completed');
+      }
     });
   }
 }

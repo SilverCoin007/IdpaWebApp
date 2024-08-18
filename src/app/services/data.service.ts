@@ -1,26 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-export interface Podcast {
-  index: number;
-  name: string;
-  author: string;
-  length: string;
-  image_url: string;
-  audio_url: string;
-  duration: number;
-}
+import { Podcast } from '../models/podcast.model';
+import { AudioPlayerService } from './audio-player.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   private jsonUrl = 'podcasts.json';
+  private podcasts: Observable<Podcast[]> | undefined;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private audioPlayerService: AudioPlayerService) {}
 
   getPodcasts(): Observable<Podcast[]> {
-    return this.http.get<Podcast[]>(this.jsonUrl);
+    this.podcasts = this.http.get<Podcast[]>(this.jsonUrl);
+    this.podcasts.subscribe(podcasts => {
+      this.audioPlayerService.setPlaylist(podcasts);
+    });
+    return this.podcasts;
   }
 }

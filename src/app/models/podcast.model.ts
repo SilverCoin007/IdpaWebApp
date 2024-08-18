@@ -1,10 +1,9 @@
 export interface Podcast {
-  id: number;
-  title: string;
+  index: number;
+  name: string;
   author: string;
-  description: string;
-  audioUrl: string;
+  length: string;
+  image_url: string;
+  audio_url: string;
   duration: number;
-  imageUrl: string;
-  releaseDate: Date;
 }

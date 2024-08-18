@@ -1,6 +1,6 @@
 [
   {
-    "index": 1,
+    "index": 0,
     "name": "Follow the Sun Sunset Remix",
     "author": "Unknown Artist",
     "length": "3:45",
@@ -9,7 +9,7 @@
     "duration": 225
   },
   {
-    "index": 2,
+    "index": 1,
     "name": "I Took A Pill In Ibiza",
     "author": "Unknown Artist",
     "length": "4:35",
@@ -18,7 +18,7 @@
     "duration": 275
   },
   {
-    "index": 3,
+    "index": 2,
     "name": "In the Arms of A Stranger",
     "author": "Unknown Artist",
     "length": "3:50",
@@ -27,7 +27,7 @@
     "duration": 230
   },
   {
-    "index": 4,
+    "index": 3,
     "name": "Sleep Tonight",
     "author": "Unknown Artist",
     "length": "4:20",
@@ -36,7 +36,7 @@
     "duration": 260
   },
   {
-    "index": 5,
+    "index": 4,
     "name": "So Good",
     "author": "Unknown Artist",
     "length": "3:15",
@@ -45,7 +45,7 @@
     "duration": 195
   },
   {
-    "index": 6,
+    "index": 5,
     "name": "Travel and Adventure",
     "author": "Unknown Artist",
     "length": "2:45",

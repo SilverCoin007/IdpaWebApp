@@ -1,9 +1,40 @@
-<div class="audio-player-controls" *ngIf="audioPlayerService.getCurrentPodcast()">
-    <button (click)="playCurrentPodcast()">Play</button>
-    <button (click)="audioPlayerService.pause()">Pause</button>
-    <button (click)="audioPlayerService.stop()">Stop</button>
-    <button (click)="seekBackward()">-10s</button>
-    <button (click)="seekForward()">+10s</button>
-    <div>{{ audioPlayerService.getCurrentTime() | date:'mm:ss' }} / {{ audioPlayerService.getDuration() | date:'mm:ss' }}</div>
+<div class="audio-player">
+  <div class="audio-player-header">
+    <h2>Now Playing</h2>
   </div>
-  
+
+  <div class="audio-player-thumbnail">
+    <img [src]="(audioPlayerService.currentPodcast | async)?.image_url" alt="Podcast thumbnail">
+  </div>
+
+  <div class="audio-player-info">
+    <div class="audio-player-title">
+      {{ (audioPlayerService.currentPodcast | async)?.name }}
+    </div>
+    <div class="audio-player-author">
+      By {{ (audioPlayerService.currentPodcast | async)?.author }}
+    </div>
+  </div>
+
+  <div class="audio-player-controls">
+    <input 
+      type="range" 
+      [value]="audioPlayerService.currentTime | async" 
+      [max]="audioPlayerService.duration | async"
+      (input)="onSeek($event)"
+    >
+    
+    <div class="audio-player-timeline">
+      <span>{{ audioPlayerService.getFormattedCurrentTime() }}</span>
+      <span>{{ audioPlayerService.getFormattedDuration() }}</span>
+    </div>
+
+    <div class="audio-player-buttons">
+      <button (click)="audioPlayerService.playPrevious()">Previous</button>
+      <button (click)="audioPlayerService.togglePlayPause()">
+        {{ (audioPlayerService.isPlaying | async) ? 'Pause' : 'Play' }}
+      </button>
+      <button (click)="audioPlayerService.playNext()">Next</button>
+    </div>
+  </div>
+</div>

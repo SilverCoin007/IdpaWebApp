@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Podcast } from '../models/podcast.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateService {
   // Initial state
-  private isNavbarCollapsedSubject = new BehaviorSubject<boolean>(false);
+  private isNavbarCollapsedSubject = new BehaviorSubject<boolean>(true);
 
   // Observable streams
   isNavbarCollapsed$ = this.isNavbarCollapsedSubject.asObservable();
