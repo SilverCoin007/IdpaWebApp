@@ -18,6 +18,7 @@
 
   <div class="audio-player-controls">
     <input 
+      class="audio-player-slider"
       type="range" 
       [value]="audioPlayerService.currentTime | async" 
       [max]="audioPlayerService.duration | async"

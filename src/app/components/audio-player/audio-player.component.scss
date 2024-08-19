@@ -39,6 +39,23 @@
     font-size: 13px;
     color: #666;
   }
+
+  .audio-player-slider{
+    -webkit-appearance: none;
+    background-color: #B5B3B3;
+    height: 0.3rem;
+    border-radius: 100rem;
+    cursor: pointer;
+  }
+
+  .audio-player-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #333333;
+    border-radius: 100%;
+    cursor: pointer;
+  } 
   
   .audio-player-controls {
     margin-top: 2.5rem;
