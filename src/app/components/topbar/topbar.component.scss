@@ -2,26 +2,35 @@
     height: 100%;
     width: 100%;
     display: flex;
-}
-
-.burger {
+  }
+  
+  .burger {
     width: auto;
     height: 100%;
     aspect-ratio: 1 / 1;
-    background-color: rgb(255,255,255, 0.65);
+    background-color: rgba(255, 255, 255, 0.65);
     border-radius: 50%;
-}
-
-.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .burger i {
+    font-size: 1.5rem;
+    color: #848484;
+  }
+  
+  .searchbar {
     width: 50%;
     height: 100%;
     margin-left: 0.5rem;
-    background-color: rgb(255,255,255, 0.65);
-    border-radius: 100000000px;
-}
-
-@media (max-width: 1300px) {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 100rem;
+  }
+  
+  @media (max-width: 1300px) {
     .searchbar {
-        width: 100%;
+      width: 100%;
     }
-}
+  }
+  
