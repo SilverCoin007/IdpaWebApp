@@ -23,10 +23,12 @@ export class AudioPlayerService {
 
       this.audio.addEventListener('play', () => {
         this.isPlaying.next(true);
+        console.log(this.isPlaying.getValue());
       });
 
       this.audio.addEventListener('pause', () => {
         this.isPlaying.next(false);
+        console.log(this.isPlaying.getValue());
       });
 
       this.audio.addEventListener('timeupdate', () => {

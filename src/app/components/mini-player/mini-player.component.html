@@ -1,1 +1,15 @@
-<div class="miniPlayer" (click)="openAudioPlayer()"></div>
+<div class="miniPlayer" (click)="openAudioPlayer()">
+    <div class="miniPlayer-thumbnail">
+        <img [src]="(audioPlayerService.currentPodcast | async)?.image_url" alt="Podcast thumbnail">
+    </div>
+    <div class="miniPlayer-info">
+      <div class="miniPlayer-title">{{ (audioPlayerService.currentPodcast | async)?.name }}</div>
+      <div class="miniPlayer-author">{{ (audioPlayerService.currentPodcast | async)?.author }}</div>
+    </div>
+    <div class="miniPlayer-controls">
+      <i class="fas"
+         [ngClass]="(audioPlayerService.isPlaying | async) ? 'fa-circle-pause' : 'fa-circle-play'"
+         (click)="audioPlayerService.togglePlayPause(); $event.stopPropagation();"></i>
+    </div>
+  </div>
+  

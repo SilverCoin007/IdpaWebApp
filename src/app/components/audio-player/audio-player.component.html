@@ -1,5 +1,8 @@
 <div class="audio-player">
   <div class="audio-player-header">
+    <button class="back-button" (click)="this.stateService.isAudioPlayerVisibleSubject.next(false)">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
     <h2>Now Playing</h2>
   </div>
 
