@@ -5,6 +5,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class StateService {
-  public isNavbarCollapsedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isNavbarCollapsedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
   public isAudioPlayerVisibleSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 }

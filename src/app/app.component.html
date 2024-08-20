@@ -4,16 +4,16 @@
       <app-navbar></app-navbar>
     </div>
     <div class="overlay" [ngClass]="{'active': !this.stateService.isNavbarCollapsedSubject.getValue()}" (click)="closeNavbar()"></div>
-    <div class="topbar">
+    <div class="topbar" [ngClass]="{'audioPlayerVisible': this.stateService.isAudioPlayerVisibleSubject.getValue()}">
       <app-topbar></app-topbar>
     </div>
-    <div class="index">
+    <div class="index" [ngClass]="{'audioPlayerVisible': this.stateService.isAudioPlayerVisibleSubject.getValue()}">
       <router-outlet></router-outlet>
     </div>
-    <div class="audioPlayer BorderRadius">
+    <div class="audioPlayer BorderRadius"  [ngClass]="{'audioPlayerVisible': this.stateService.isAudioPlayerVisibleSubject.getValue()}">
       <app-audio-player></app-audio-player>
     </div>
-    <div class="miniPlayer">
+    <div class="miniPlayer" [ngClass]="{'audioPlayerVisible': this.stateService.isAudioPlayerVisibleSubject.getValue()}">
       <app-mini-player></app-mini-player>
     </div>
   </div>
