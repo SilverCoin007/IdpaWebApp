@@ -1,9 +1,9 @@
-<div [ngClass]="{'collapsed': isNavbarCollapsed}">
-  <div class="main">
-    <div class="navbar" [ngClass]="{'visible': !isNavbarCollapsed}">
+<div [ngClass]="{'collapsed': this.stateService.isNavbarCollapsedSubject.getValue()}">
+  <div class="main" [ngClass]="{'audioPlayerVisible': this.stateService.isAudioPlayerVisibleSubject.getValue()}">
+    <div class="navbar" [ngClass]="{'visible': !this.stateService.isNavbarCollapsedSubject.getValue()}">
       <app-navbar></app-navbar>
     </div>
-    <div class="overlay" [ngClass]="{'active': !isNavbarCollapsed}" (click)="closeNavbar()"></div>
+    <div class="overlay" [ngClass]="{'active': !this.stateService.isNavbarCollapsedSubject.getValue()}" (click)="closeNavbar()"></div>
     <div class="topbar">
       <app-topbar></app-topbar>
     </div>
@@ -12,6 +12,9 @@
     </div>
     <div class="audioPlayer BorderRadius">
       <app-audio-player></app-audio-player>
+    </div>
+    <div class="miniPlayer">
+      <app-mini-player></app-mini-player>
     </div>
   </div>
 </div>

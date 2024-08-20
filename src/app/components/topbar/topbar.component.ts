@@ -12,7 +12,7 @@ export class TopbarComponent {
   constructor(private stateService: StateService) {}
 
   toggleNavbar() {
-    const currentCollapsedState = this.stateService.getNavbarCollapsed();
-    this.stateService.setNavbarCollapsed(!currentCollapsedState);
+    const currentCollapsedState = this.stateService.isNavbarCollapsedSubject.getValue();
+    this.stateService.isNavbarCollapsedSubject.next(!currentCollapsedState);
   }
 }

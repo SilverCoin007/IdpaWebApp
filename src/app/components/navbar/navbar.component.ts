@@ -10,19 +10,13 @@ import { StateService } from '../../services/state.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   isCollapsed: boolean = false;
 
-  constructor(private stateService: StateService, private router: Router) {}
-
-  ngOnInit(): void {
-    this.stateService.isNavbarCollapsed$.subscribe(collapsed => {
-      this.isCollapsed = collapsed;
-    });
-  }
+  constructor(public stateService: StateService, private router: Router) {}
 
   closeNavbar() {
-    this.stateService.setNavbarCollapsed(true);
+    this.stateService.isNavbarCollapsedSubject.next(true);
   }
 
   isActive(url: string): boolean {
