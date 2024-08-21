@@ -1,35 +1,18 @@
-.podcast-container {
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-right: 10px;
-  }
-  
   .podcast-container {
+    overflow-y: auto;
     max-height: 89.5vh;
+    overflow-x: visible;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
   }
 
   @media (max-width: 1300px) {
     .podcast-container {
-        max-height: calc(80vh);
+        max-height: calc(82.6vh);
     }
   }
   
   .podcast-container::-webkit-scrollbar {
-    width: 8px;
-    border-radius: 100px;
-  }
-  
-  .podcast-container::-webkit-scrollbar-track {
-    background: #ffffff83;
-    border-radius: 100px;
-  }
-  
-  .podcast-container::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 100px;
-  }
-  
-  .podcast-container::-webkit-scrollbar-thumb:hover {
-    background: #a1a1a1;
+    display: none;
   }
   

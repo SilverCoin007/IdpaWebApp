@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { AudioPlayerService } from './audio-player.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,14 @@ import { AudioPlayerService } from './audio-player.service';
 export class SearchService {
   public searchTerm: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  constructor(private audioPlayerService: AudioPlayerService) {
+  constructor(
+    private audioPlayerService: AudioPlayerService,
+    private router: Router  // Injektion des Routers
+  ) {
     this.searchTerm.pipe(
       debounceTime(0)
     ).subscribe(term => {
+      this.navigateToHomeIfNotThere();  // Navigation zur Home-Seite, falls notwendig
       this.search(term);
     });
   }
@@ -29,6 +34,12 @@ export class SearchService {
       );
 
       this.audioPlayerService.setDisplayedPlaylist(filteredPodcasts);
+    }
+  }
+
+  private navigateToHomeIfNotThere() {
+    if (this.router.url !== '/home') {
+      this.router.navigate(['/home']);
     }
   }
 }

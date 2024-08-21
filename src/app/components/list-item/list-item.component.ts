@@ -16,10 +16,16 @@ export class ListItemComponent {
   constructor(private audioPlayerService: AudioPlayerService) {}
 
   formatIndex(index: number): string {
-  return (index + 1) < 10 ? `0${index + 1}` : `${index + 1}`;
+    return (index + 1) < 10 ? `0${index + 1}` : `${index + 1}`;
   }
 
   playPodcast() {
     this.audioPlayerService.play(this.podcast);
+  }
+
+  isCurrentPodcastClass(): string {
+    return this.audioPlayerService.currentPodcast.getValue()?.index === this.podcast.index 
+      ? 'current-podcast' 
+      : '';
   }
 }

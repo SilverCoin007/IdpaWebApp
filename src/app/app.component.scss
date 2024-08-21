@@ -2,14 +2,14 @@
   height: 100svh;
   display: grid;
   background-color: rgb(231,239,245);
-  grid-template-columns: 20rem 1.2rem 1fr 1.2rem 30rem 1.2rem;
+  grid-template-columns: 20rem 1fr 30rem 1.2rem;
   grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 1.2rem;
   grid-template-areas: 
-    "n . . . . ."
-    "n . t . a ."
-    "n . . . a ."
-    "n . i . a ."
-    "n . i . . .";
+    "n . . ."
+    "n t a ."
+    "n . a ."
+    "n i a ."
+    "n i . .";
   transition: grid-template-columns 0.3s ease;
 }
 
@@ -21,6 +21,8 @@
 
 .topbar {
   grid-area: t;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .index {
@@ -33,7 +35,7 @@
 }
 
 .collapsed .main {
-  grid-template-columns: 5rem 1.2rem 1fr 1.2rem 30rem 1.2rem;
+  grid-template-columns: 5rem 1fr 30rem 1.2rem;
 }
 
 .miniPlayer {
@@ -43,13 +45,12 @@
 @media (max-width: 1300px) {
   .main {
     grid-template-columns: 1.2rem 1fr 1fr 1fr 1.2rem;
-    grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 1.2rem 5rem;
+    grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 5rem;
     grid-template-areas: 
       ". . . . ."
       ". t t t ."
       ". . . . ."
       ". i i i ."
-      ". . . . ."
       "m m m m m";
   }
 

@@ -22,7 +22,7 @@ export class TopbarComponent {
 
   getBurgerIconClass() {
     const isScreenSmall = window.innerWidth < 1300;
-
+  
     if (isScreenSmall) {
       return 'fa-bars';
     } else {

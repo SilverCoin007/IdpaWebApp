@@ -1,70 +1,84 @@
 img {
-    width: 2.5rem;
-    height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.audio {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  border-radius: 10px;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+  color: #828282;
+  background-color: rgba(255, 255, 255, 0.446);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.audio:hover {
+  background-color: rgba(255, 255, 255, 0.954);
+  transform: scale(1.02);
+}
+
+.audio-index {
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.6rem;
+}
+
+.audio-thumbnail {
+  border-radius: 15%;
+}
+
+.audio-details {
+  display: flex;
+  margin-left: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.audio-name,
+.audio-author {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.audio-name {
+  width: 50%;
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: #302F2F;
+}
+
+.current-podcast {
+  color: #1ED760 !important;
+}
+
+.audio-author {
+  margin-right: 1rem;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.audio-length {
+  width: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+}
+
+@media (max-width: 1300px) {
+  .audio-details {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .audio {
-      display: flex;
-      align-items: center;
-      height: 3.5rem;
-      border-radius: 10px;
-      padding: 0 1rem;
-      margin-bottom: 0.5rem;
-      background-color: rgba(255, 255, 255, 0.65);
-      color: #828282;
-    }
-    
-    .audio-index {
-      width: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .audio-details {
-      display: flex;
-      margin-left: 1rem;
-      width: 100%;
-      align-items: center;
-    }
-    
-    .audio-name,
-    .audio-author {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    
-    .audio-name {
-      width: 50%;
-      flex-shrink: 0;
-      font-size: 1rem;
-      color: #302F2F;
-    }
-    
-    .audio-author {
-      margin-right: 1rem;
-      flex-shrink: 0;
-      font-size: 0.8rem;
-      color: #888;
-    }
-    
-    .audio-length {
-      width: 3rem;
-      display: flex;
-      justify-content: flex-end;
-      font-size: 1rem;
-    }
-    
-    @media (max-width: 1300px) {
-      .audio-details {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    
-      .audio-name,
-      .audio-author {
-        width: 100%;
-      }
-    }
-    
+
+  .audio-name,
+  .audio-author {
+    width: 100%;
+  }
+}

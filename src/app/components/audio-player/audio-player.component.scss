@@ -111,6 +111,11 @@
   cursor: pointer;
   color: #333;
   font-size: 45px;
+  transition:color 0.2s ease;
+}
+
+.audio-player-buttons i:hover {
+  color: #515151;
 }
 
 .audio-player-buttons .fa-circle-play,

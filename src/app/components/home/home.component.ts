@@ -14,8 +14,15 @@ import { Podcast } from '../../models/podcast.model';
 })
 export class HomeComponent {
   podcasts$: Observable<Podcast[]>;
+  public hasScrollbar = false;
 
   constructor(public audioPlayerService: AudioPlayerService) {
     this.podcasts$ = this.audioPlayerService.displayedPlaylist.asObservable();
   }
+
+  checkScrollbar(container: HTMLElement) {
+    this.hasScrollbar = container.scrollHeight > container.clientHeight;
+  }
 }
+
+
