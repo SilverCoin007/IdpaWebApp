@@ -43,12 +43,13 @@
 @media (max-width: 1300px) {
   .main {
     grid-template-columns: 1.2rem 1fr 1fr 1fr 1.2rem;
-    grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 5rem;
+    grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 1.2rem 5rem;
     grid-template-areas: 
       ". . . . ."
       ". t t t ."
       ". . . . ."
       ". i i i ."
+      ". . . . ."
       "m m m m m";
   }
 
@@ -60,6 +61,8 @@
     width: 75%;
     transition: left 0.3s ease;
     z-index: 1000;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 
   .navbar.visible {
@@ -96,7 +99,7 @@
   }
 
   .overlay.active {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(169, 169, 169, 0.484);
     backdrop-filter: blur(2px);
     pointer-events: auto;
   }

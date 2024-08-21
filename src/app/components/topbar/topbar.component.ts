@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { StateService } from '../../services/state.service';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-topbar',
@@ -10,12 +11,15 @@ import { StateService } from '../../services/state.service';
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent {
-  constructor(public stateService: StateService) {}
+  constructor(
+    public stateService: StateService,
+    public searchService: SearchService
+  ) {}
 
   toggleNavbar() {
-    const currentCollapsedState = this.stateService.isNavbarCollapsedSubject.getValue();
-    this.stateService.isNavbarCollapsedSubject.next(!currentCollapsedState);
+    this.stateService.toggleNavbar();
   }
+
   getBurgerIconClass() {
     const isScreenSmall = window.innerWidth < 1300;
 
@@ -24,5 +28,10 @@ export class TopbarComponent {
     } else {
       return this.stateService.isNavbarCollapsedSubject.getValue() ? 'fa-chevron-right' : 'fa-chevron-left';
     }
+  }
+
+  onSearchInput(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.searchService.searchTerm.next(value);
   }
 }

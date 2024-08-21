@@ -16,7 +16,7 @@ export class DataService {
   getPodcasts(): Observable<Podcast[]> {
     this.podcasts = this.http.get<Podcast[]>(this.jsonUrl);
     this.podcasts.subscribe(podcasts => {
-      this.audioPlayerService.setPlaylist(podcasts);
+      this.audioPlayerService.setOriginalPlaylist(podcasts);
     });
     return this.podcasts;
   }

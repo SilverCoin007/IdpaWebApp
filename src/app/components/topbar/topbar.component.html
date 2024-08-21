@@ -2,5 +2,13 @@
   <div class="burger" (click)="toggleNavbar()">
     <i class="fas" [ngClass]="getBurgerIconClass()"></i>
   </div>
-  <div class="searchbar"></div>
+  <div class="searchbar">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    <input 
+      type="text" 
+      placeholder="Search for podcasts" 
+      (input)="onSearchInput($event)"
+      class="search-input"
+    >
+  </div>
 </div>

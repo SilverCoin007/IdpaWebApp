@@ -1,4 +1,4 @@
-<div *ngIf="podcasts$ | async as podcasts; else noPodcasts">
+<div class="podcast-container" *ngIf="podcasts$ | async as podcasts; else noPodcasts">
   <div *ngFor="let podcast of podcasts">
     <app-list-item [podcast]="podcast"></app-list-item>
   </div>

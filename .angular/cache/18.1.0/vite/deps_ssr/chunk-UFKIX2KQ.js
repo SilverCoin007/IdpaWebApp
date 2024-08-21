@@ -15,7 +15,6 @@ import {
   inject,
   isDevMode,
   makeEnvironmentProviders,
-  require_operators,
   setClassMetadata,
   signal,
   ɵɵdefineInjectable,
@@ -23,10 +22,13 @@ import {
   ɵɵdefineNgModule,
   ɵɵgetInheritedFactory,
   ɵɵinject
-} from "./chunk-XWNYNQY4.js";
+} from "./chunk-SEKPOGJ3.js";
 import {
   require_cjs
-} from "./chunk-VDZEJD3D.js";
+} from "./chunk-IXWXOSOL.js";
+import {
+  require_operators
+} from "./chunk-IJKRIHJI.js";
 import {
   __spreadProps,
   __spreadValues,
@@ -1323,4 +1325,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-UICMYAA7.js.map
+//# sourceMappingURL=chunk-UFKIX2KQ.js.map

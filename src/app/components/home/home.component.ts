@@ -16,6 +16,6 @@ export class HomeComponent {
   podcasts$: Observable<Podcast[]>;
 
   constructor(public audioPlayerService: AudioPlayerService) {
-    this.podcasts$ = this.audioPlayerService.playlist.asObservable();
+    this.podcasts$ = this.audioPlayerService.displayedPlaylist.asObservable();
   }
 }
