@@ -1,6 +1,7 @@
   .podcast-container {
     overflow-y: auto;
-    max-height: 89.5vh;
+    height: 100%;
+    box-sizing: border-box;
     overflow-x: visible;
     padding-right: 1.2rem;
     padding-left: 1.2rem;
