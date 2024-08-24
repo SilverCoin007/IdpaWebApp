@@ -2,7 +2,7 @@
   height: 100svh;
   display: grid;
   background-color: rgb(231,239,245);
-  grid-template-columns: 20rem 1fr 20rem 1.2rem;
+  grid-template-columns: 20rem 1fr 30rem 1.2rem;
   grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 1.2rem;
   grid-template-areas: 
     "n . . ."
@@ -12,6 +12,20 @@
     "n i . .";
   transition: grid-template-columns 0.3s ease;
   overflow: hidden;
+}
+
+.collapsed .main {
+  grid-template-columns: 5rem 1fr 30rem 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 20rem 1fr 20rem 1.2rem;
+  }
+
+  .collapsed .main {
+    grid-template-columns: 5rem 1fr 20rem 1.2rem;
+  }
 }
 
 .navbar {
@@ -33,10 +47,6 @@
 .audioPlayer {
   background-color: rgb(255,255,255);
   grid-area: a;
-}
-
-.collapsed .main {
-  grid-template-columns: 5rem 1fr 20rem 1.2rem;
 }
 
 .miniPlayer {

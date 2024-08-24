@@ -4,7 +4,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 96%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .audio-player-header {

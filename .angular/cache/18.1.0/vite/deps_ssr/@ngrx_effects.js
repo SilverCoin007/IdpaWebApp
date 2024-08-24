@@ -7,7 +7,7 @@ import {
   StoreFeatureModule,
   StoreRootModule,
   createAction
-} from "./chunk-MHHFQKAO.js";
+} from "./chunk-UFKIX2KQ.js";
 import {
   ENVIRONMENT_INITIALIZER,
   ErrorHandler,
@@ -23,7 +23,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-KTCKYPC4.js";
+} from "./chunk-SEKPOGJ3.js";
 import {
   require_cjs
 } from "./chunk-IXWXOSOL.js";
