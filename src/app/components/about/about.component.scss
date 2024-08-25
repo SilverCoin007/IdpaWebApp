@@ -1,0 +1,46 @@
+.about{
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+        "hero text "
+        "footer text ";
+    grid-gap: 1rem;
+    padding: 1.2rem;
+    padding-top: 0rem;
+}
+
+.hero{
+    grid-area: hero;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius:1.2rem;
+    padding: 1.2rem;
+}
+
+.text{
+    grid-area: text;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius:1.2rem;
+    padding: 1.2rem;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius:1.2rem;
+    padding: 1.2rem;
+}
+
+@media (max-width: 1300px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "hero"
+            "text"
+            "footer";
+        overflow: auto;
+    }
+}
