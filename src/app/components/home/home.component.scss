@@ -1,16 +1,10 @@
   .podcast-container {
-    overflow-y: auto;
     height: 100%;
     box-sizing: border-box;
     overflow-x: visible;
+    overflow-y: auto;
     padding-right: 1.2rem;
     padding-left: 1.2rem;
-  }
-
-  @media (max-width: 1300px) {
-    .podcast-container {
-        max-height: calc(82.6vh);
-    }
   }
   
   .podcast-container::-webkit-scrollbar {

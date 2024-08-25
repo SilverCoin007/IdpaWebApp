@@ -37,8 +37,11 @@
 
 .audio-player-thumbnail {
   width: 100%;
+  max-width: 430px;
+  max-height: 430px;
   aspect-ratio: 1 / 1;
   flex-shrink: 0;
+  margin: auto;
 }
 
 .audio-player-thumbnail img {

@@ -2,7 +2,7 @@
   height: 100svh;
   display: grid;
   background-color: rgb(231,239,245);
-  grid-template-columns: 20rem 1fr 30rem 1.2rem;
+  grid-template-columns: 18rem 1fr 30rem 1.2rem;
   grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 1.2rem;
   grid-template-areas: 
     "n . . ."
@@ -42,6 +42,7 @@
 
 .index {
   grid-area: i;
+  overflow: auto;
 }
 
 .audioPlayer {
@@ -66,14 +67,23 @@
   }
   
   .collapsed .main {
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main.audioPlayerVisible {
+    grid-template-columns: 1.2rem 1fr 1.2rem;
+    grid-template-rows: 1.2rem 1fr 1.2rem;
+    grid-template-areas: 
+      ". . ."
+      ". a ."
+      ". . .";
   }
 
   .navbar {
     position: fixed;
     left: -75%; 
     top: 0;
-    height: 100svh;
+    height: 100vh;
     width: 75%;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -118,31 +128,23 @@
 
   .miniPlayer {
     display: block;
-
-    grid-area: m;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; 
+    height: 5rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
     overflow: hidden;
   }
 
-  .main.audioPlayerVisible {
-    grid-template-columns: 1.2rem 1fr 1fr 1fr 1.2rem;
-    grid-template-rows: 1.2rem 2.5rem 1.2rem 1fr 1.2rem;
-    grid-template-areas: 
-      ". . . . ."
-      ". a a a ."
-      ". a a a ."
-      ". a a a ."
-      ". . . . .";
-  }
-
   .audioPlayer.audioPlayerVisible {
     grid-area: a;
     display: block;
+    height: calc(100vh - 2.4rem);
+    width: calc(100vw - 2.4rem);
   }
 
   .miniPlayer.audioPlayerVisible {
