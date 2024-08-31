@@ -14,23 +14,54 @@
 
 .hero{
     grid-area: hero;
+    box-sizing: border-box;
+    height: 100%;
+    color: #3e3e3e;
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius:1.2rem;
     padding: 1.2rem;
+    padding-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left; 
+}
+
+.hero h1 {
+    margin: 0px;
 }
 
 .text{
+    color: #3e3e3e;
     grid-area: text;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius:1.2rem;
     padding: 1.2rem;
+    padding-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left; 
 }
 
 .footer{
+    color: #3e3e3e;
     grid-area: footer;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius:1.2rem;
     padding: 1.2rem;
+    padding-left: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left; 
 }
 
 @media (max-width: 1300px) {

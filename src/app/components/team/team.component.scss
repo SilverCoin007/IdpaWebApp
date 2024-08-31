@@ -1,0 +1,52 @@
+.TeamSection {
+    padding: 1.2rem;
+    padding-top: 0rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.Team {
+    height: 100%;
+    box-sizing: border-box;
+    color: #3e3e3e;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1.2rem;
+    padding-top: 0rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.Members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem; /* Abstand zwischen den Mitgliedern */
+    justify-content: space-between;
+}
+
+.Member {
+    flex: 1 1 calc(50% - 1.2rem); /* Jedes Mitglied nimmt 50% der Breite minus den Abstand ein */
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.Member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.Member h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.Member p {
+    margin: 0;
+}
