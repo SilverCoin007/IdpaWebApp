@@ -1,52 +1,128 @@
 .TeamSection {
-    padding: 1.2rem;
-    padding-top: 0rem;
     height: 100%;
     box-sizing: border-box;
-}
-
-.Team {
-    height: 100%;
-    box-sizing: border-box;
-    color: #3e3e3e;
-    background-color: rgba(255, 255, 255, 0.6);
     padding: 1.2rem;
     padding-top: 0rem;
-    border-radius: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.Content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 1.2rem;
+    /* Feste Höhe entfernt, um dem Inhalt Platz zu geben */
+    flex-grow: 1;
+}
+
+.Team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #3e3e3e;
+    padding: 1.2rem;
+}
+
+.Titel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.Titel h1 {
+    margin: 0;
+    padding-top: 1.2rem;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.Titel p {
+    margin: 0;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Members {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem; /* Abstand zwischen den Mitgliedern */
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 2rem;
 }
 
 .Member {
-    flex: 1 1 calc(50% - 1.2rem); /* Jedes Mitglied nimmt 50% der Breite minus den Abstand ein */
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem;
     border-radius: 0.5rem;
-    text-align: center;
-}
-
-.Member img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
 }
 
 .Member h2 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 1.9rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.Member h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .Member p {
     margin: 0;
+    padding-top: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .Titel p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .Members {
+        grid-template-columns: 1fr; /* Jedes Teammitglied nimmt die volle Breite ein */
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+
+    .Member {
+        align-items: flex-start; /* Bleibt linksbündig */
+        text-align: left;
+    }
+
+    .Member p {
+        text-align: left;
+    }
+
+    .Titel p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .TeamSection {
+        height: auto;
+    }
+
+    .Content {
+        height: auto;
+        padding: 1rem;
+    }
 }

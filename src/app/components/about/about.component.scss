@@ -1,77 +1,45 @@
-.about{
+.about {
     height: 100%;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: 
-        "hero text "
-        "footer text ";
-    grid-gap: 1rem;
     padding: 1.2rem;
     padding-top: 0rem;
 }
 
-.hero{
-    grid-area: hero;
-    box-sizing: border-box;
+.content {
+    background-color: rgba(255, 255, 255, 0.65);
     height: 100%;
-    color: #3e3e3e;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius:1.2rem;
-    padding: 1.2rem;
-    padding-left: 2rem;
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+}
 
+.titelText {
+    font-size: 1.5rem;
+    font-weight: initial;
+    margin: 0rem;
+    margin-bottom: 1rem;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+}
+
+.accordion-header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left; 
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #ffffff00;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1.2rem;
 }
 
-.hero h1 {
-    margin: 0px;
-}
-
-.text{
-    color: #3e3e3e;
-    grid-area: text;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius:1.2rem;
-    padding: 1.2rem;
-    padding-left: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left; 
-}
-
-.footer{
-    color: #3e3e3e;
-    grid-area: footer;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius:1.2rem;
-    padding: 1.2rem;
-    padding-left: 2rem;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left; 
-}
-
-@media (max-width: 1300px) {
-    .about {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-            "hero"
-            "text"
-            "footer";
-        overflow: auto;
-    }
+.accordion-content {
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 0.5rem;
 }

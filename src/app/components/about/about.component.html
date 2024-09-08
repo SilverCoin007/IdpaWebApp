@@ -1,14 +1,20 @@
 <div class="about">
-    <div class="hero">
-        <h1>Warum die Zukunft der Auto industrie?</h1>
-        <p>et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <div class="content">
+      <div class="line"></div>
+      <div class="title">
+        <h1 class="titelText">Über das Projekt</h1>
+        <div class="Accordion">
+          <div class="accordion-item" *ngFor="let item of accordionItems; let i = index">
+            <div class="accordion-header" (click)="toggleAccordion(i)">
+              <span class="accordion-title">{{ item.title }}</span>
+              <span class="accordion-icon">{{ openedIndex === i ? '-' : '+' }}</span>
+            </div>
+            <div class="accordion-content" *ngIf="openedIndex === i">
+              <p>{{ item.content }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="text">
-        <p>This is a simple Angular 2 application that demonstrates the use of components, services, and routing. et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo </p>
-        <p>This is a simple Angular 2 application that demonstrates the use of components, services, and routing. et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo </p>
-        
-    </div>
-    <div class="footer">
-        <p>Lorem ipsum dolodolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametr sit amet, consetetur sadipscing elitr, sed diam nonumy eirm Lorem ipsum dolodolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametr sit amet, consetetur sadipscing elitr, sed diam nonumy eirm.</p>
-    </div>
-</div>
+  </div>
+  

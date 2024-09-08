@@ -3,25 +3,25 @@
     <li class="nav-item logo">
       <a routerLink="/home" class="nav-link" (click)="closeNavbar()">
         <img src="icons/logo.svg" alt="Logo">
-        <h1 class="nav-text">IDPA WebApp</h1>
+        <h1 class="nav-text">Zukft. der Autos</h1>
       </a>
     </li>
     <li class="nav-item link" [ngClass]="{'inactive': !isActive('/home')}">
       <a routerLink="/home" class="nav-link" (click)="closeNavbar()">
         <img src="icons/podcast.svg" alt="podcast">
-        <span class="link-text nav-text">Podcast</span>
+        <span class="link-text nav-text">Hörbuch</span>
       </a>
     </li>
     <li class="nav-item link" [ngClass]="{'inactive': !isActive('/about')}">
       <a routerLink="/about" class="nav-link" (click)="closeNavbar()">
         <img src="icons/project.svg" alt="project">
-        <span class="link-text nav-text">Our Project</span>
+        <span class="link-text nav-text">Unser Project</span>
       </a>
     </li>
     <li class="nav-item link" [ngClass]="{'inactive': !isActive('/team')}">
       <a routerLink="/team" class="nav-link" (click)="closeNavbar()">
         <img src="icons/team.svg" alt="team">
-        <span class="link-text nav-text">Team</span>
+        <span class="link-text nav-text">Das Team</span>
       </a>
     </li>
   </ul>
