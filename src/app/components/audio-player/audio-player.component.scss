@@ -1,11 +1,11 @@
 .audio-player {
-  height: 100%;
-  box-sizing: border-box;
   padding: 5%;
   padding-top: 3%;
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .audio-player-header {
