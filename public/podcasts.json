@@ -4,8 +4,8 @@
     "name": "Autonomes Fahren",
     "author": "Benjamin Senti",
     "length": "2:41",
-    "image_url": "/images/follow_the_sun.png",
-    "audio_url": "/audios/Autonomes Fahren.mp3",
+    "image_url": "./images/follow_the_sun.png",
+    "audio_url": "./audios/Autonomes Fahren.mp3",
     "duration": 225
   },
   {
