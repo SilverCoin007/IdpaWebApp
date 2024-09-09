@@ -4,71 +4,71 @@
     "name": "Autonomes Fahren",
     "author": "Benjamin Senti",
     "length": "2:41",
-    "image_url": "./images/follow_the_sun.png",
-    "audio_url": "./audios/Autonomes Fahren.mp3",
-    "duration": 225
+    "image_url": "./images/autonomes_fahren.png",
+    "audio_url": "./audios/autonomes_fahren.mp3",
+    "duration": 161
   },
   {
     "index": 1,
-    "name": "I Took A Pill In Ibiza",
-    "author": "Mike Posner",
-    "length": "4:35",
-    "image_url": "/images/i_took_a_pill_in_ibiza.png",
-    "audio_url": "/audios/i_took_a_pill_in_ibiza.mp3",
-    "duration": 275
+    "name": "Fahrzeugvernetzung",
+    "author": "Simon Hunziker",
+    "length": "1:58",
+    "image_url": "./images/fahrzeugvernetzung.png",
+    "audio_url": "./audios/fahrzeugvernetzung.mp3",
+    "duration": 118
   },
   {
     "index": 2,
-    "name": "In the Arms of A Stranger",
-    "author": "Kanye West",
-    "length": "3:50",
-    "image_url": "/images/in_the_arms_of_a_stranger.png",
-    "audio_url": "/audios/in_the_arms_of_a_stranger.mp3",
-    "duration": 230
+    "name": "Nachhaltigkeit",
+    "author": "Benjamin Senti",
+    "length": "1:47",
+    "image_url": "./images/nachhaltigkeit.png",
+    "audio_url": "./audios/nachhaltigkeit.mp3",
+    "duration": 107
   },
   {
     "index": 3,
-    "name": "Sleep Tonight",
-    "author": "Switch Disco",
-    "length": "4:20",
-    "image_url": "/images/sleep_tonight.png",
-    "audio_url": "/audios/sleep_tonight.mp3",
-    "duration": 260
+    "name": "Preise von Elektroautos",
+    "author": "Severin Probst",
+    "length": "1:39",
+    "image_url": "./images/preise_der_elektroautos.png",
+    "audio_url": "./audios/preise_der_elektroautos.mp3",
+    "duration": 99
   },
   {
     "index": 4,
-    "name": "So Good",
-    "author": "B.o.B",
-    "length": "3:15",
-    "image_url": "/images/so_good.png",
-    "audio_url": "/audios/so_good.mp3",
-    "duration": 195
+    "name": "Probleme der Elektroautos",
+    "author": "Silvan Stöckli",
+    "length": "3:08",
+    "image_url": "./images/probleme_der_elektroautos.png",
+    "audio_url": "./audios/probleme_der_elektroautos.mp3",
+    "duration": 188
   },
   {
     "index": 5,
-    "name": "Travel and Adventure",
-    "author": "AlexGuz",
-    "length": "2:45",
-    "image_url": "/images/travel_and_adventure.png",
-    "audio_url": "/audios/travel_and_adventure.mp3",
-    "duration": 165
+    "name": "Reichweite von Elektroautos",
+    "author": "Severin Probst",
+    "length": "1:21",
+    "image_url": "./images/reichweite_elektroautos.png",
+    "audio_url": "./audios/reichweite_elektroautos.mp3",
+    "duration": 81
   },
   {
     "index": 6,
-    "name": "Follow the Sun Sunset Remix",
-    "author": "LYOD",
-    "length": "3:45",
-    "image_url": "/images/follow_the_sun.png",
-    "audio_url": "/audios/follow_the_sun.mp3",
-    "duration": 225
+    "name": "Risiken der Fahrzeugvernetzung",
+    "author": "Simon Hunziker",
+    "length": "3:01",
+    "image_url": "./images/risiken_fahrzeugvernetzung.png",
+    "audio_url": "./audios/risiken_fahrzeugvernetzung.mp3",
+    "duration": 181
   },
   {
     "index": 7,
-    "name": "I Took A Pill In Ibiza",
-    "author": "Mike Posner",
-    "length": "4:35",
-    "image_url": "/images/i_took_a_pill_in_ibiza.png",
-    "audio_url": "/audios/i_took_a_pill_in_ibiza.mp3",
-    "duration": 275
+    "name": "Roboterautos",
+    "author": "Benjamin Senti",
+    "length": "2:17",
+    "image_url": "./images/roboterautos.png",
+    "audio_url": "./audios/roboterautos.mp3",
+    "duration": 137
   }
 ]
