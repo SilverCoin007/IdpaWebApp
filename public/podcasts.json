@@ -20,7 +20,7 @@
   {
     "index": 2,
     "name": "Nachhaltigkeit",
-    "author": "Benjamin Senti",
+    "author": "Severin Probst",
     "length": "1:47",
     "image_url": "./images/nachhaltigkeit.png",
     "audio_url": "./audios/nachhaltigkeit.mp3",
@@ -56,7 +56,7 @@
   {
     "index": 6,
     "name": "Risiken der Fahrzeugvernetzung",
-    "author": "Simon Hunziker",
+    "author": "Simon Hunziker, Benjamin Senti",
     "length": "3:01",
     "image_url": "./images/risiken_fahrzeugvernetzung.png",
     "audio_url": "./audios/risiken_fahrzeugvernetzung.mp3",
@@ -65,7 +65,7 @@
   {
     "index": 7,
     "name": "Roboterautos",
-    "author": "Benjamin Senti",
+    "author": "Simon Hunziker",
     "length": "2:17",
     "image_url": "./images/roboterautos.png",
     "audio_url": "./audios/roboterautos.mp3",
